@@ -49,7 +49,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <a
-                    href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                     target="_blank">
                     <FaYoutube className="icons" />
                   </a>
@@ -89,7 +89,7 @@ const Wrapper = styled.section`
     max-width: 60vw;
     margin: auto;
     padding: 5rem 10rem;
-    background-color: ${({ theme }) => theme.colors.bg};
+    background-color: #6C6C6C;
     border-radius: 1rem;
     box-shadow: ${({ theme }) => theme.colors.shadowSupport};
     transform: translateY(50%);
@@ -102,7 +102,7 @@ const Wrapper = styled.section`
 
   footer {
     padding: 14rem 0 9rem 0;
-    background-color: ${({ theme }) => theme.colors.footer_bg};
+    background-color: #C6C6C6;
     h3 {
       color: ${({ theme }) => theme.colors.purple};
       margin-bottom: 2.4rem;

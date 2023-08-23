@@ -15,7 +15,7 @@ const HeroSection = ({myData}) => {
                 <p>
                     My store is the best store on the planet.
                 </p>
-                <NavLink>
+                <NavLink to="../Products">
                     <Button>Shop Now</Button>
                 </NavLink>
             </div>

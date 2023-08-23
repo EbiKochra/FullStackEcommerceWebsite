@@ -12,7 +12,7 @@ const cartReducer = (state, action) => {
 
       if (existingProduct) {
         let updatedProduct = state.cart.map((curElem) => {
-          if (curElem.id == id + color) {
+          if (curElem.id === id + color) {
             let newAmount = curElem.amount + amount;
   
             if (newAmount >= curElem.max) {

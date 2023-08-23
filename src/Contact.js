@@ -35,16 +35,7 @@ const Contact = () => {
 
   return <Wrapper>
     <h2 className="common-heading">Contact Page</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d452.53228476104954!2d67.05529777476471!3d24.8550268988573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1691315136266!5m2!1sen!2s"
-      width="100%"
-      height="400" 
-      style= {{ border:0 }} 
-      allowFullscreen="" 
-      loading="lazy" 
-      referrerPolicy="no-referrer-when-downgrade">
-      </iframe>
-
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.269064359545!2d-79.38963172408434!3d43.64257005311862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d68bf33a9b%3A0x15edd8c4de1c7581!2sCN%20Tower!5e0!3m2!1sen!2s!4v1692784832815!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div className="container">
         <div className="contact-form">
             <form 
