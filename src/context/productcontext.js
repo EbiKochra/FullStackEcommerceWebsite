@@ -2,10 +2,12 @@
 import axios from "axios";
 import { createContext, useContext, useEffect, useReducer } from "react";
 import reducer from '../reducer/productReducer';
+// import api from './data.json';
 
 const AppContext = createContext();
 
-const API = "https:api.pujakaitem.com/api/products";
+const API = "https://livehostbackend-production.up.railway.app/api/products";
+// const API = api;
 
 const initialState ={
     isLoading: false,

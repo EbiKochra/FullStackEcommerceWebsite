@@ -10,9 +10,12 @@ import { TbReplace, TbTruck, TbTruckDelivery } from "react-icons/tb";
 import { MdSecurity } from "react-icons/md";
 import Star from "./components/Star";
 import AddToCart from "./components/AddToCart";
+// import api from './data.json';
 
 
-const API = "https:api.pujakaitem.com/api/products";
+
+const API = "https://livehostbackend-production.up.railway.app/api/products";
+//const API = api;
 
 const SingleProduct = () => {
   const { getSingleProduct, isSingleLoading, singleProduct } = useProductContext();

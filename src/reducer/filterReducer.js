@@ -1,35 +1,34 @@
 const filterReducer = (state, action) => {
   switch (action.type) {
     case "LOAD_FILTER_PRODUCTS":
-      let priceArr = action.payload.map((curElem) => curElem.price);
-      console.log(
-        "🚀 ~ file: filterReducer.js ~ line 5 ~ filterReducer ~ priceArr",
-        priceArr
-      );
+      // Check if action.payload is an array before using map
+      if (Array.isArray(action.payload.Products)) {
+        let priceArr = action.payload.Products.map((curElem) => curElem.price);
+        console.log(
+          "🚀 ~ file: filterReducer.js ~ line 5 ~ filterReducer ~ priceArr",
+          priceArr
+        );
 
-      // 1way
-      // console.log(Math.max.apply(null, priceArr));
+        let maxPrice = Math.max(...priceArr);
+        console.log(
+          "🚀 ~ file: filterReducer.js ~ line 23 ~ filterReducer ~ maxPrice",
+          maxPrice
+        );
 
-      // let maxPrice = priceArr.reduce(
-      //   (initialVal, curVal) => Math.max(initialVal, curVal),
-      //   0
-      // );
-      // console.log(
-      //   "🚀 ~ file: filterReducer.js ~ line 16 ~ filterReducer ~ maxPrice",
-      //   maxPrice
-      // );
-
-      let maxPrice = Math.max(...priceArr);
-      console.log(
-        "🚀 ~ file: filterReducer.js ~ line 23 ~ filterReducer ~ maxPrice",
-        maxPrice
-      );
-
-      return {
-        ...state,
-        filter_products: [...action.payload],
-        all_products: [...action.payload],
-        filters: { ...state.filters, maxPrice, price: maxPrice },
+        return {
+          ...state,
+          filter_products: [...action.payload.Products],
+          all_products: [...action.payload.Products],
+          filters: { ...state.filters, maxPrice, price: maxPrice },
+        };
+      } else {
+        // Return an empty array as a fallback value
+        return {
+          ...state,
+          filter_products: [],
+          all_products: [],
+          filters: { ...state.filters, maxPrice: 0, price: 0 },
+        };
       };
 
     case "SET_GRID_VIEW":

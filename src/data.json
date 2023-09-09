@@ -1,0 +1,191 @@
+{
+    "Products": [
+        {
+            "_id": "64fb2913f6401b43839b4274",
+            "id": "64fafbf44e6ded9a6f53eb5f",
+            "name": "Samsung Galaxy S21",
+            "company": "samsung",
+            "price": 899,
+            "colors": [
+                "#808080",
+                "#FFFFFF",
+                "#EE82EE"
+            ],
+            "image": "https://ebitechnicalbucket.s3.ca-central-1.amazonaws.com/Galaxys21.jpeg",
+            "description": "A high-end Android smartphone from Samsung.",
+            "category": "mobile",
+            "featured": false,
+            "rating": 4.9,
+            "shipping": false,
+            "__v": 0
+        },
+        {
+            "_id": "64fb2913f6401b43839b4275",
+            "id": "64fafbf44e6ded9a6f53eb5e",
+            "name": "iPhone 13",
+            "company": "apple",
+            "price": 999,
+            "colors": [
+                "#C0C0C0",
+                "#0000FF",
+                "#FFD700",
+                "#FFC0CB",
+                "#191970"
+            ],
+            "image": "https://ebitechnicalbucket.s3.ca-central-1.amazonaws.com/iphone13.jpeg",
+            "description": "The latest iPhone with advanced features.",
+            "category": "mobile",
+            "featured": true,
+            "rating": 4.9,
+            "shipping": false,
+            "__v": 0
+        },
+        {
+            "_id": "64fb2913f6401b43839b4278",
+            "id": "64fafbf44e6ded9a6f53eb64",
+            "name": "Sony PlayStation 5",
+            "company": "sony",
+            "price": 499,
+            "colors": [
+                "#000000"
+            ],
+            "image": "https://ebitechnicalbucket.s3.ca-central-1.amazonaws.com/PS5.jpg",
+            "description": "Next-generation gaming console by Sony.",
+            "category": "gaming",
+            "featured": true,
+            "rating": 4.9,
+            "shipping": false,
+            "__v": 0
+        },
+        {
+            "_id": "64fb2913f6401b43839b4279",
+            "id": "64fafbf44e6ded9a6f53eb65",
+            "name": "MacBook Pro",
+            "company": "apple",
+            "price": 1999,
+            "colors": [
+                "#C0C0C0",
+                "#000000",
+                "#808080"
+            ],
+            "image": "https://ebitechnicalbucket.s3.ca-central-1.amazonaws.com/MacBook+Pro.jpg",
+            "description": "Powerful and stylish laptop for professionals.",
+            "category": "laptop",
+            "featured": true,
+            "rating": 4.9,
+            "shipping": false,
+            "__v": 0
+        },
+        {
+            "_id": "64fb2913f6401b43839b427a",
+            "id": "64fafbf44e6ded9a6f53eb66",
+            "name": "LG OLED 4K TV",
+            "company": "lg",
+            "price": 1499,
+            "colors": [
+                "#000000",
+                "#FFFFFF"
+            ],
+            "image": "https://ebitechnicalbucket.s3.ca-central-1.amazonaws.com/LGTV.jpg",
+            "description": "Immerse yourself in stunning 4K OLED visuals.",
+            "category": "tv",
+            "featured": true,
+            "rating": 4.8,
+            "shipping": true,
+            "__v": 0
+        },
+        {
+            "_id": "64fb2913f6401b43839b427b",
+            "id": "64fafbf44e6ded9a6f53eb67",
+            "name": "Canon EOS 5D Mark IV",
+            "company": "canon",
+            "price": 2499,
+            "colors": [
+                "#000000",
+                "#FFFFFF"
+            ],
+            "image": "https://ebitechnicalbucket.s3.ca-central-1.amazonaws.com/d555.jpg",
+            "description": "A high-quality DSLR camera for professional photography.",
+            "category": "camera",
+            "featured": true,
+            "rating": 4.9,
+            "shipping": true,
+            "__v": 0
+        },
+        {
+            "_id": "64fb2913f6401b43839b427c",
+            "id": "64fafbf44e6ded9a6f53eb68",
+            "name": "Bose QuietComfort 35 II",
+            "company": "bose",
+            "price": 349,
+            "colors": [
+                "#000000",
+                "#FFFFFF",
+                "#008080"
+            ],
+            "image": "https://ebitechnicalbucket.s3.ca-central-1.amazonaws.com/BoseQC35.jpg",
+            "description": "Premium noise-canceling headphones for a superior audio experience.",
+            "category": "audio",
+            "featured": true,
+            "rating": 4.8,
+            "shipping": true,
+            "__v": 0
+        },
+        {
+            "_id": "64fb2913f6401b43839b427d",
+            "id": "64fafbf44e6ded9a6f53eb69",
+            "name": "Sony Bravia 4K LED TV",
+            "company": "sony",
+            "price": 1299,
+            "colors": [
+                "#000000",
+                "#FFFFFF"
+            ],
+            "image": "https://ebitechnicalbucket.s3.ca-central-1.amazonaws.com/SonyTv.jpg",
+            "description": "Experience lifelike 4K visuals with Sony's LED TV.",
+            "category": "tv",
+            "featured": false,
+            "rating": 4.7,
+            "shipping": true,
+            "__v": 0
+        },
+        {
+            "_id": "64fb2913f6401b43839b427e",
+            "id": "65fafbf44e6ded9a6f53eb5f",
+            "name": "iphone x",
+            "company": "apple",
+            "price": 6000000,
+            "colors": [
+                "#ff0000",
+                "#000000",
+                "#CDD0D0"
+            ],
+            "image": "https://images.pexels.com/photos/1275229/pexels-photo-1275229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "description": "The mobile is compact with its 6.2-inch OLED screen and far lighter at 168g. It perfectly captures the design, looks, and feel of the expensive one. It comes with a snapdragon processor with a 5n chip in it. It has a 200mp camera in the rear 100mp in front perfect for selfie lovers. It also supports HDR content means you can watch 4K content on it.",
+            "category": "mobile",
+            "featured": true,
+            "rating": 4.9,
+            "shipping": false,
+            "__v": 0
+        },
+        {
+            "_id": "64fb2913f6401b43839b427f",
+            "id": "66fafbf44e6ded9a6f53eb5f",
+            "name": "samsung s20",
+            "company": "samsung",
+            "price": 5000000,
+            "colors": [
+                "#000",
+                "#22D3EF"
+            ],
+            "image": "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "description": "The mobile is compact with its 6.2-inch OLED screen and far lighter at 168g. It perfectly captures the design, looks, and feel of the expensive one. It comes with a snapdragon processor with a 5n chip in it. It has a 200mp camera in the rear 100mp in front perfect for selfie lovers. It also supports HDR content means you can watch 4K content on it.",
+            "category": "mobile",
+            "featured": false,
+            "rating": 4.9,
+            "shipping": true,
+            "__v": 0
+        }
+    ],
+    "nbHits": 10
+}

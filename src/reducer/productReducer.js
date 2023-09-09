@@ -10,11 +10,10 @@ const ProductReducer = (state, action) => {
         isLoading: true,
       };
 
-    case "SET_API_DATA":
-      const featureData = action.payload.filter((curElem) => {
-        return curElem.featured === true;
-      });
-
+      case "SET_API_DATA":
+        const featureData = Array.isArray(action.payload.Products)
+        ? action.payload.Products.filter((curElem) => curElem.featured === true)
+        : [];
       return {
         ...state,
         isLoading: false,
