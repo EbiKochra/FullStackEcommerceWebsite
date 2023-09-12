@@ -3,8 +3,8 @@ import reducer from "../reducer/cartReducer";
 
 const CartContext = createContext();
 
-// const getLocalCartData = () => {
-//   let localCartData = localStorage.getItem("thapaCart");
+const getLocalCartData = () => {
+  let localCartData = localStorage.getItem("ebiCart");
 //   if (localCartData === []) {
 //     return [];
 //   } else {
@@ -12,9 +12,14 @@ const CartContext = createContext();
 //   }
 // };
 
+const parsedData = JSON.parse(localCartData);
+if(!Array.isArray(parsedData)) return [];
+return parsedData;
+};
+
 const initialState = {
-  cart: [],
-  // cart: getLocalCartData(),
+  // cart: [],
+  cart: getLocalCartData(),
   total_item: "",
   total_price: "",
   shipping_fee: 50000,
@@ -55,7 +60,7 @@ const CartProvider = ({ children }) => {
   useEffect(() => {
     dispatch({ type: "CART_TOTAL_ITEM" });
     dispatch({ type: "CART_TOTAL_PRICE" });
-    localStorage.setItem("thapaCart", JSON.stringify(state.cart));
+    localStorage.setItem("ebiCart", JSON.stringify(state.cart));
   }, [state.cart]);
 
   return (
