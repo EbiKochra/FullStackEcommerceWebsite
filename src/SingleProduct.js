@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useProductContext } from "./context/productcontext";
 import PageNavigation from "./components/PageNavigation";
-import MyImage from "./MyImage";
+import MyImage2 from "./MyImage2";
 import FormatPrice from "./Helpers/FormatPrice";
 import { TbReplace, TbTruck, TbTruckDelivery } from "react-icons/tb";
 import { MdSecurity } from "react-icons/md";
@@ -19,31 +19,38 @@ const API = "https://livehostbackend-production.up.railway.app/api/products";
 
 const SingleProduct = () => {
   const { getSingleProduct, isSingleLoading, singleProduct } = useProductContext();
-
-
   const {id} = useParams();
 
-  const {
-    id: alias,
-    name,
-    company,
-    price,
-    description,
-    category,
-    stock,
-    stars,
-    reviews,
-    image,
-    } = singleProduct;
+    useEffect(() => {
+      console.log("Fetching product with ID:", id);
+      getSingleProduct(`${API}?id=${id}`);
+    }, []);
+  
+    console.log("Single Product Data:", singleProduct);
 
-  useEffect(() => {
-    getSingleProduct(`${API}?id=${id}`);
+    // Check if singleProduct is not null and if it's an array with at least one element
+  if (singleProduct && Array.isArray(singleProduct.Products) && singleProduct.Products.length > 0) {
+    // Access the first product in the array
+    const product = singleProduct.Products[0];
 
-  }, []);
+    const {
+      id: alias,
+      name,
+      company,
+      price,
+      description,
+      category,
+      stock,
+      stars,
+      reviews,
+      image,
+    } = product;
 
-  if(isSingleLoading){
-    return <div className="page_loading">Loading....</div>;
-  }
+    const imagesArray = [image]; // Use the image URL directly
+
+
+// Now, imagesArray contains an array of objects with id and url properties
+console.log(imagesArray);
 
   return (
     <Wrapper>
@@ -52,8 +59,15 @@ const SingleProduct = () => {
       <div className="grid grid-two-column">
         {/* product Images  */}
         <div className="product_images">
-          <MyImage imgs={image} />
+        {imagesArray.length > 0 &&
+        imagesArray.map((imageUrl, index) => {
+          console.log("Image URL:", imageUrl); // Add this line to log the imageURL
+          return (
+            <MyImage2 imagesArray={imagesArray} key={index} />
+          );
+        })}
         </div>
+
 
         {/* product data  */}
         <div className="product-data">
@@ -105,12 +119,20 @@ const SingleProduct = () => {
             </p>
           </div>
           <hr />
-          {stock > 0 && <AddToCart product={singleProduct} />}
+          {stock > 0 && <AddToCart product={product} />}
         </div>
       </div>
     </Container>
   </Wrapper>
   );
+}
+
+if (isSingleLoading) {
+  return <div className="page_loading">Loading....</div>;
+}
+
+return null;
+
 };
 
 const Wrapper = styled.section`

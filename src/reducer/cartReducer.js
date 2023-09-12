@@ -36,10 +36,14 @@ const cartReducer = (state, action) => {
           name: product.name,
           color,
           amount,
-          image: product.image[0].url,
+          image: product.image,
           price: product.price,
           max: product.stock,
         };
+
+        // Log the 'image' property of cartProduct
+        console.log("Cart Product Image:", cartProduct.image);
+
   
         return {
           ...state,
